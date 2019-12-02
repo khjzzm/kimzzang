@@ -15,3 +15,9 @@ AWS Route 53 (www.zzang.kim)
 ### 2019-11-25
 HTTPS (Let's Encrypt)
 
+### 2019-11-28
+FrontEnd Vue.js
+
+### 2019-12-02
+JPA
+
