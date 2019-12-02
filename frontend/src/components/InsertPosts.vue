@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="InsertPosts">
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group id="input-group-1" label="제목:" label-for="input-1" description="제목을 작성해주세요.">
                 <b-form-input
@@ -24,8 +24,8 @@
                         placeholder="Enter author"></b-form-input>
             </b-form-group>
 
-            <b-button type="submit" variant="primary">Submit</b-button>
-            <b-button type="reset" variant="danger">Reset</b-button>
+            <b-button type="submit" variant="primary">글등록</b-button>
+            <b-button type="reset" variant="danger">초기화</b-button>
 
         </b-form>
 
@@ -37,14 +37,10 @@
 
 <script>
     export default {
-        name: "Posts",
+        name: "InsertPosts",
         data() {
             return {
-                form: {
-                    title: '',
-                    author: '',
-                    content: '',
-                },
+                form: {title: '', author: '', content: ''},
                 show: true
             }
         },
@@ -75,5 +71,7 @@
 </script>
 
 <style scoped>
-
+#InsertPosts{
+    margin: 30px;
+}
 </style>
