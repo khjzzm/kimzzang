@@ -38,7 +38,6 @@ spring.profiles.include: real-db
 server:
   port: 8082
 
-
 #---
 #spring:
 #  profiles: real-db
