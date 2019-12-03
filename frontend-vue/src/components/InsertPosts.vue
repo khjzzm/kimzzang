@@ -1,5 +1,6 @@
 <template>
     <div id="InsertPosts">
+        <h1>{{msg}} | {{status}}</h1>
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group id="input-group-1" label="제목:" label-for="input-1" description="제목을 작성해주세요.">
                 <b-form-input
@@ -35,9 +36,19 @@
     </div>
 </template>
 
+
 <script>
     export default {
         name: "InsertPosts",
+        props:{
+            status:{
+                type: String,
+                required: true
+            },
+            msg:{
+                type:String
+            }
+        },
         data() {
             return {
                 form: {title: '', author: '', content: ''},
@@ -70,8 +81,7 @@
     }
 </script>
 
+
 <style scoped>
-#InsertPosts{
-    margin: 30px;
-}
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="list">
         <h1>{{ msg }}</h1>
         <table class="table table-striped table-hover">
             <thead>
@@ -12,9 +12,7 @@
                 </th>
                 <th>author</th>
                 <th>title</th>
-                <th>title 수정</th>
                 <th>delete</th>
-                <th>update</th>
             </tr>
             </thead>
             <tbody>
@@ -27,15 +25,7 @@
                 </td>
                 <td>{{post.author}}</td>
                 <td>{{post.title}}</td>
-                <!--<td> <b-form-input-->
-                        <!--id="utitle"-->
-                        <!--v-model="title"-->
-                        <!--type="text"-->
-                        <!--required-->
-                        <!--placeholder="Enter Update Title"></b-form-input>-->
-                <!--</td>-->
                 <td><b-button variant="danger" v-on:click="deletePosts(post.id)">삭제</b-button></td>
-                <td><b-button variant="success" v-on:click="updatePosts(post.id)">수정</b-button></td>
             </tr>
             </tbody>
             <tfoot>
@@ -45,8 +35,7 @@
             </tr>
             </tfoot>
         </table>
-
-        <InsertPosts></InsertPosts>
+        <InsertPosts msg="컴포넌트 전달" status="정상"></InsertPosts>
     </div>
 </template>
 
@@ -58,12 +47,12 @@
         components: {
             InsertPosts
         },
-        data(){
+        data: function () {
             return {
-                msg : 'BackEnd API call',
+                msg : 'Vue.js + SpringBoot(JPA)',
                 posts: [],
                 selected: [],
-                selectAll: false
+                selectAll: false,
             }
         },
         created(){
@@ -105,24 +94,13 @@
                 }).catch(function (error) {
                     alert(error);
                 })
-            },
-            // updatePosts(){
-            //     this.$http.post('/api/update',
-            //         JSON.stringify(this.form),
-            //         {headers: {'Content-Type': 'application/json;charset=UTF-8'}}
-            //     ).then(function (response) {
-            //         if(response.status===200){
-            //             alert(response.status);
-            //             location.reload(true);
-            //         }
-            //     }).catch(function (error) {
-            //         alert(error);
-            //     })
-            // }
+            }
         }
     }
 </script>
 
 <style scoped>
-
+#list{
+    margin: 30px;
+}
 </style>

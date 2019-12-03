@@ -2,11 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/views/HelloWorld'
 import Example from '@/views/Example'
-import Apple from '@/views/Apple'
-import IPad from '@/views/IPad'
-import IPadair from '@/views/IPadair'
-import IPhone from '@/views/IPhone'
-import List from '@/views/List'
+import Apple from '@/views/Apple/Apple'
+import Mac from '@/views/Apple/Mac/Mac'
+import IPad from '@/views/Apple/iPad/IPad'
+import IPhone from '@/views/Apple/iPhone/IPhone'
+import Watch from '@/views/Apple/Watch/Watch'
+import Posts from '@/views/Posts'
 import NotFound from  '@/components/NotFound'
 
 Vue.use(Router);
@@ -29,31 +30,36 @@ export default new Router({
             component: Example
         },
         {
-            path: '/list',
-            name: 'List',
-            component: List
-        },
-        {
             path: '/apple/:product?',
             name: 'Apple',
             component: Apple,
             children:[
                 {
-                    path: '/ipad',
-                    name: 'IPad',
+                    path: 'mac',
+                    name: 'mac',
+                    component: Mac
+                },
+                {
+                    path: 'ipad',
+                    name: 'ipad',
                     component: IPad
                 },
                 {
-                    path: 'iPadair',
-                    name: 'IPadair',
-                    component: IPadair
-                },
-                {
-                    path: 'iphone7',
-                    name: 'iphone7',
+                    path: 'iphone',
+                    name: 'iphone',
                     component: IPhone
                 },
+                {
+                    path: 'watch',
+                    name: 'watch',
+                    component: Watch
+                },
             ]
+        },
+        {
+            path: '/posts',
+            name: 'Posts',
+            component: Posts
         }
     ]
 });

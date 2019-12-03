@@ -1,6 +1,7 @@
 <template>
   <div class="app">
-    <h2>HelloWorld</h2>
+    <h2>Hello Vue.js</h2>
+    <img alt="Vue logo" src="../assets/logo.png">
   </div>
 </template>
 
@@ -12,9 +13,6 @@
         }
     }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h2{color: #ff3f3e
-  }
+  h2{color: #3f916e}
 </style>

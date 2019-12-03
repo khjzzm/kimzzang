@@ -2,7 +2,7 @@
     <div id="app">
         <h2>Example</h2>
         <p>{{ $route.params }}</p>
-        {{ $route.params.id }}
+        <p>{{ $route.params.id }}</p>
     </div>
 </template>
 
