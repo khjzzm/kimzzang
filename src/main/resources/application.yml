@@ -1,11 +1,11 @@
 spring:
   profiles:
     active: local # 기본 환경 선택
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    show-sql: true
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#    show-sql: true
 
 
 # local 환경
@@ -18,7 +18,9 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
-      use-new-id-generator-mappings: false
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate.format_sql: true
   h2:
     console:
       enabled: true
