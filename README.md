@@ -22,5 +22,5 @@ FrontEnd Vue.js
 JPA
 
 ### 2019-12-04
-React
+FrontEnd React
 
