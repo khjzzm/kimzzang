@@ -1,7 +1,13 @@
 ## React 읽을거리
 
+react/CHANGELOG
+[https://github.com/facebook/react/blob/master/CHANGELOG.md](https://github.com/facebook/react/blob/master/CHANGELOG.md)
+
 누구든지 하는 리액트
 [https://react-anyone.vlpt.us/](https://react-anyone.vlpt.us/)
+
+Airbnb React/JSX Style Guide
+[https://github.com/airbnb/javascript/tree/master/react](https://github.com/airbnb/javascript/tree/master/react)
 
 함수형 컴포넌트 (Functional Component)
 [https://velopert.com/2994](https://velopert.com/2994)
