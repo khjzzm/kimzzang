@@ -17,6 +17,11 @@ public class PostsRestController {
 
     private PostsService postsService;
 
+    @GetMapping("/api/proxy")
+    public String hello() {
+        return "Proxy Test";
+    }
+
     @GetMapping("/api/list")
     public List<PostsMainResponseDto> list() {
         return postsService.findAllDesc();

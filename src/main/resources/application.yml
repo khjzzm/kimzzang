@@ -41,10 +41,10 @@ server:
   port: 8082
 
 ---
-#spring:
-#  profiles: real-db
-#  datasource:
-#        url:
-#        username:
-#        password:
-#        driver-class-name:
+spring:
+  profiles: real-db
+  datasource:
+        url: jdbc:mariadb://database-1.cc1j8x3t3gto.ap-northeast-2.rds.amazonaws.com:3306/zzm
+        username: khj
+        password: ikeacafe!
+        driver-class-name: org.mariadb.jdbc.Driver

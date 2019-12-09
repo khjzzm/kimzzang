@@ -8,9 +8,9 @@ import Posts from './routes/Posts';
 import Login from './routes/Login';
 import MyPage from './routes/MyPage';
 import Search from './routes/Search';
-import NotFound from "./routes/NotFound";
+import NotFound from './routes/NotFound';
 
-
+import List from './components/List'
 import Header from './components/Header.js'
 import MyName from './components/MyName.js'
 import LifeCycle from './components/LifeCycle.js'
@@ -30,6 +30,9 @@ const App = () => {
                   <Route path="/search" component={Search}/>
                   <Route path="/name" component={MyName}/>
                   <Route path="/lifecycle" component={LifeCycle}/>
+                  {/**/}
+                  <Route path="/list" component={List}/>
+
                   <Route component={NotFound}/>;
               </Switch>
           </div>
