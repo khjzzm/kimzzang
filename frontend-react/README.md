@@ -17,3 +17,6 @@ Flux로의 카툰 안내서
 
 Redux로의 카툰 안내서
 [http://bestalign.github.io/2015/10/26/cartoon-intro-to-redux/](http://bestalign.github.io/2015/10/26/cartoon-intro-to-redux/)
+
+컴포넌트에 날개를 달아줘, 리액트 Higher-order Component (HoC)
+[https://velopert.com/3537](https://velopert.com/3537)
