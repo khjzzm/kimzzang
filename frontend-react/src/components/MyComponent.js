@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class MyComponent extends Component {
   state = {
@@ -21,12 +21,12 @@ class MyComponent extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.value !== prevProps.value) {
-      console.log('value 값이 바뀌었다!', this.props.value);
+      console.log("value 값이 바뀌었다!", this.props.value);
     }
   }
 
   componentWillUnmount() {
-    console.log('Good Bye');
+    console.log("Good Bye");
   }
 
   render() {

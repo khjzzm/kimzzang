@@ -20,3 +20,9 @@ Redux로의 카툰 안내서
 
 컴포넌트에 날개를 달아줘, 리액트 Higher-order Component (HoC)
 [https://velopert.com/3537](https://velopert.com/3537)
+
+React 컴포넌트 목록
+[https://github.com/brillout/awesome-react-components](https://github.com/brillout/awesome-react-components)
+
+React에서 Redux 전에 배워야 할 8가지
+[https://edykim.com/ko/post/learn-react-before-using-redux/](https://edykim.com/ko/post/learn-react-before-using-redux/)

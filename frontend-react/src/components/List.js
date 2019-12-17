@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from 'axios';
-import InsertPosts from '../components/InsertPosts';
+
+// import InsertPosts from '../components/InsertPosts';
 
 class List extends Component {
 
@@ -11,18 +12,30 @@ class List extends Component {
         }
     }
 
-    async componentDidMount() {
-        await axios.get('/api/list')
+    componentDidMount() {
+        this._callAPI();
+        this._callAPI2();
+    }
+
+    _callAPI = () => {
+        axios.get('/api/list')
             .then(res => {
                 const postLists = res.data;
                 this.setState({
                     postLists
                 });
-            }).catch(err =>{
-                console.log(err);
-            });
-    }
+            }).catch(err => {
+            console.log(err);
+        });
+    };
 
+    _callAPI2 = async () => {
+        await fetch('/api/list')
+            .then(response => response.json())
+            .then(result => this.setState({
+                postLists: result
+            }))
+    };
 
     //TODO InsertPosts
     render() {
@@ -32,7 +45,6 @@ class List extends Component {
             return postLists.map(post => {
                 return (
                     <div>
-                        <InsertPosts/>
                         <div key={post.id}>
                             <p>title : {post.title}</p>
                             <p>author : {post.author}</p>
@@ -43,8 +55,7 @@ class List extends Component {
         } else {
             return (
                 <div>
-                    <h3>No Photos</h3>
-                    <InsertPosts/>
+                    <h3>No Posts</h3>
                 </div>
             )
         }

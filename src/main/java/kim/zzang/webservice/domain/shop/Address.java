@@ -1,7 +1,6 @@
 package kim.zzang.webservice.domain.shop;
 
 import javax.persistence.Embeddable;
-import java.util.Objects;
 
 /**
  * Created by holyeye on 2014. 3. 11..

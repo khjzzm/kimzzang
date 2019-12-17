@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const Home = ({history}) => {
-    return (
-        <div>
-            Home
-            <button onClick={() => {
-                history.push('/posts')
-            }
-            }>버어튼</button>
-        </div>
-    );
+const Home = ({ history }) => {
+  return (
+    <div>
+      Home
+      <button
+        onClick={() => {
+          history.push("/posts");
+        }}
+      >
+        버어튼
+      </button>
+    </div>
+  );
 };
 
 export default Home;

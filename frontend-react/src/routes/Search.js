@@ -1,10 +1,13 @@
 import React from 'react';
+import queryString from 'query-string';
 
-const Search = ({location}) => {
+const Search = ({location, match}) => {
+    const query = queryString.parse(location.search);
+    console.log(query);
+
     return (
         <div>
-            {/*TODO*/}
-            {new URLSearchParams(location.search).get('keyword')} 검색
+            <h2>About {match.params.name}</h2>
         </div>
     );
 };

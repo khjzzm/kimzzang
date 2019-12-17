@@ -1,13 +1,13 @@
-import React from 'react';
-import Counter from '../components/Counter'
+import React from "react";
+import Counter from "../components/Counter";
 
 const Login = () => {
-    return(
-        <div>
-            Login
-            <Counter/>
-        </div>
-    );
+  return (
+    <div>
+      Login
+      <Counter />
+    </div>
+  );
 };
 
 export default Login;
