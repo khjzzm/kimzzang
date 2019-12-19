@@ -1,4 +1,5 @@
 import React from 'react';
+import AlertBox from './AlertBox'
 
 // 비구조화 할당 문법: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const YourName = ({ name, age }) => {
@@ -10,6 +11,10 @@ const YourName = ({ name, age }) => {
             상태 비저장 컴포넌트의 목적은 오직 뷰를 렌더링 하는 것입니다.
 
             상태비저장 컴포넌트는 더 많이 사용할수록, 상태저장 컴포넌트는 더 적게 사용할 수록 좋다 - 랙트 교과서
+
+            <AlertBox>
+                <h1>You have pending notifications</h1>
+            </AlertBox>
         </div>
     );
 };

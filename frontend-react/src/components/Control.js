@@ -6,7 +6,6 @@ import React, {Component } from "react";
 //     onRandomizeColor: PropTypes.func
 // };
 
-
 function createWarning(funcName) {
     return () => console.warn('onPlus is not defined')
 }

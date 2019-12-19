@@ -13,6 +13,7 @@ import NotFound from "./routes/NotFound";
 import List from "./components/List";
 import Header from "./components/Header.js";
 import MyName from "./components/MyName.js";
+import AlertBox from "./components/AlertBox.js";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/name" component={MyName} />
           {/**/}
           <Route path="/list" component={List} />
+          <Route path="/alertbox" component={AlertBox} />
           <Route component={NotFound} />;
         </Switch>
       </div>

@@ -15,11 +15,13 @@ public class PostsMainResponseDto {
     private String title;
     private String author;
     private String modifiedDate;
+    private String img;
 
     public PostsMainResponseDto(Posts entity) {
         id = entity.getId();
         title = entity.getTitle();
         author = entity.getAuthor();
+        img = "http://placeimg.com/64/64/any";
         modifiedDate = toStringDateTime(entity.getModifiedDate());
     }
 
