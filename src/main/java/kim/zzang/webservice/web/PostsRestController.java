@@ -31,7 +31,7 @@ public class PostsRestController {
     public void insertPosts(@RequestBody PostsSaveRequestDto dto){
         postsService.insert(dto);
     }
-
+    
     @PostMapping("/api/update")
     public void updatePosts(@RequestBody PostsUpdateRequestDto dto){
         postsService.update(dto);

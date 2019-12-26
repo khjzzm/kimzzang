@@ -1,15 +1,27 @@
 package kim.zzang.webservice.domain.shop;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 
 /**
  * Created by holyeye on 2014. 3. 11..
  */
 @Embeddable
+@Setter
+@Getter
 public class Address {
 
+//    @Column(name = "city")
     private String city;
+
+//    @Column(name = "street")
     private String street;
+
+//    @Column(name = "zipcode")
     private String zipcode;
 
     public Address() {

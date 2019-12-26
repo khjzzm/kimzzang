@@ -1,8 +1,8 @@
 package kim.zzang.webservice.service;
 
 import kim.zzang.webservice.domain.posts.Posts;
-import kim.zzang.webservice.domain.posts.PostsRepository;
 import kim.zzang.webservice.dto.posts.PostsSaveRequestDto;
+import kim.zzang.webservice.repository.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;

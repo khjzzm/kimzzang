@@ -9,8 +9,8 @@ import Login from "./routes/Login";
 import MyPage from "./routes/MyPage";
 import Search from "./routes/Search";
 import NotFound from "./routes/NotFound";
+import List from "./routes/List";
 
-import List from "./components/List";
 import Header from "./components/Header.js";
 import MyName from "./components/MyName.js";
 import AlertBox from "./components/AlertBox.js";

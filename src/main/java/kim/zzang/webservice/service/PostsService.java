@@ -1,10 +1,10 @@
 package kim.zzang.webservice.service;
 
 import kim.zzang.webservice.domain.posts.Posts;
-import kim.zzang.webservice.domain.posts.PostsRepository;
 import kim.zzang.webservice.dto.posts.PostsMainResponseDto;
 import kim.zzang.webservice.dto.posts.PostsSaveRequestDto;
 import kim.zzang.webservice.dto.posts.PostsUpdateRequestDto;
+import kim.zzang.webservice.repository.PostsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

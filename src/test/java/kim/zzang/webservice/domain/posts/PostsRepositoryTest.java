@@ -1,6 +1,7 @@
 package kim.zzang.webservice.domain.posts;
 
 import kim.zzang.webservice.dto.posts.PostsMainResponseDto;
+import kim.zzang.webservice.repository.PostsRepository;
 import kim.zzang.webservice.service.PostsService;
 import org.junit.After;
 import org.junit.Test;

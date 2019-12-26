@@ -24,3 +24,5 @@ JPA
 ### 2019-12-04
 FrontEnd React
 
+### 2019-12-24
+JPA Member
