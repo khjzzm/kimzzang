@@ -11,6 +11,7 @@ import java.util.Optional;
 @Getter
 @NoArgsConstructor
 public class PostsMainResponseDto {
+    
     private Long id;
     private String title;
     private String author;

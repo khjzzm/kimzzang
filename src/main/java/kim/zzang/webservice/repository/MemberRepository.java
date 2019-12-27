@@ -7,10 +7,13 @@ import kim.zzang.webservice.domain.shop.Member;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public interface MemberRepository extends JpaRepository<Member, Long>{
 
-//    List<Member> findByMember(String id);
+
+    @Query(value = "SELECT m FROM Member m ORDER BY m.id DESC")
+    Stream<Member> findAllDesc();
 
     @Query(value = "SELECT m FROM Member m where m.name = :name")
     List<Member> findByName(@Param("name") String name);

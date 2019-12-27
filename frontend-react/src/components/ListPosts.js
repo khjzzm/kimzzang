@@ -9,7 +9,7 @@ class ListPosts extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            postLists: [],
+            postList: [],
             completed: 0
         };
     }
@@ -46,15 +46,15 @@ class ListPosts extends Component {
             .then(response => response.json())
             .then(result =>
                 this.setState({
-                    postLists: result
+                    postList: result
                 })
             );
     };
 
     render() {
-        const { postLists } = this.state;
-        if (postLists.length > 0) {
-            return postLists.map((post, index) => {
+        const { postList } = this.state;
+        if (postList.length > 0) {
+            return postList.map((post, index) => {
                 return (
                     <Table>
                         <TableBody>
