@@ -51,6 +51,10 @@ class InsertMember extends Component {
             });
     };
 
+
+
+
+
     render() {
         return (
             <div>
@@ -83,7 +87,7 @@ class InsertMember extends Component {
                         value={this.state.address.zipcode}
                         onChange={this.handleChange}
                     />
-                    <button type="submit">등록</button>
+                    <button onClick={this.handleSubmit}>등록</button>
                 </form>
             </div>
         );

@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 
 class ListMember extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            memberList: [],
-            completed: 0
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         memberList: [],
+    //         completed: 0
+    //     };
+    // }
+
+    state = {
+        memberList: [],
+        completed: 0
+    };
+    //Propertly Initializer Syntax를 사용한 메서드
 
     componentDidMount() {
         this._callAPI2();
@@ -36,8 +42,8 @@ class ListMember extends Component {
             return memberList.map((member, index) => {
                 return(
                     <div>
-                        {member.id}
-                        {member.name}
+                        {member.id} | 
+                        {member.name} | 
                         {member.address.city}
                     </div>
                 )
