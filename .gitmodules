@@ -1,0 +1,3 @@
+[submodule "kimzzang-frontend"]
+	path = kimzzang-frontend
+	url = https://github.com/khjzzm/kimzzang-frontend.git
