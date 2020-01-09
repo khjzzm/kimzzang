@@ -39,7 +39,7 @@ deploy:
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
     on:
-      repo: khjzzm/kimzzang #Github 주소
+      repo: khjzzm/kimzzang-backend #Github 주소
       branch: master
 
   - provider: codedeploy
@@ -53,5 +53,5 @@ deploy:
     region: ap-northeast-2
     wait-until-deployed: true
     on:
-      repo: khjzzm/kimzzang
+      repo: khjzzm/kimzzang-backend
       branch: master

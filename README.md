@@ -29,3 +29,6 @@ JPA Member
 
 ### 2020-01-08
 Swagger
+
+### 2020-01-09
+Change FrontEnd to submodule
