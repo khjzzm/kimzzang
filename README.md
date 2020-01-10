@@ -1,4 +1,4 @@
-# Getting Started [![Build Status](https://travis-ci.org/khjzzm/kimzzang.svg?branch=master)](https://travis-ci.org/khjzzm/kimzzang)
+# zzang.kim BE [![Build Status](https://travis-ci.org/khjzzm/kimzzang-backend.svg?branch=master)](https://travis-ci.org/khjzzm/kimzzang)
 
 ### 2019-11-19
 개발환경 구성하기 (Backend)
