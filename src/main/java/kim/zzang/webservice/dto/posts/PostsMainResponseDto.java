@@ -22,7 +22,7 @@ public class PostsMainResponseDto {
         id = entity.getId();
         title = entity.getTitle();
         author = entity.getAuthor();
-        img = "http://placeimg.com/64/64/any";
+        img = "https://placeimg.com/64/64/any";
         modifiedDate = toStringDateTime(entity.getModifiedDate());
     }
 
