@@ -1,4 +1,4 @@
-# zzang.kim BE [![Build Status](https://travis-ci.org/khjzzm/kimzzang-backend.svg?branch=master)](https://travis-ci.org/khjzzm/kimzzang)
+# zzang.kim BE [![Build Status](https://travis-ci.org/khjzzm/kimzzang-backend.svg?branch=master)](https://travis-ci.org/khjzzm/kimzzang) [![Coverage Status](https://coveralls.io/repos/github/khjzzm/kimzzang-backend/badge.svg?branch=master)](https://coveralls.io/github/khjzzm/kimzzang-backend?branch=master)
 
 ### 2019-11-19
 개발환경 구성하기 (Backend)
@@ -32,3 +32,6 @@ Swagger
 
 ### 2020-01-09
 Change FrontEnd to submodule
+
+### 2020-01-13
+Coveralls with Jacoco

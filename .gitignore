@@ -7,3 +7,4 @@ bin
 out
 .classpath
 .project
+.coveralls.yml

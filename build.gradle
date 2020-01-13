@@ -1,8 +1,11 @@
 plugins {
 	id 'org.springframework.boot' version '2.2.1.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'com.github.kt3k.coveralls' version '2.8.2'
 	id 'java'
 }
+
+apply plugin: 'jacoco'
 
 group = 'kim.zzang'
 version = '0.0.9'
@@ -30,8 +33,16 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.5.0'
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.5.0'
+	implementation 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.3'
 }
 
 test {
 	useJUnitPlatform()
+}
+
+jacocoTestReport {
+	reports {
+		xml.enabled = true // coveralls plugin depends on xml format report
+		html.enabled = true
+	}
 }
