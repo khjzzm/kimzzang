@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins = {"*"})
 public class PostsRestController {
 
     private PostsService postsService;
