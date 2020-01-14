@@ -27,10 +27,10 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.mariadb.jdbc:mariadb-java-client")
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
-	compileOnly 'org.projectlombok:lombok'
-	compile('com.h2database:h2')
-	compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
+	compile('org.projectlombok:lombok')
 	annotationProcessor 'org.projectlombok:lombok'
+	compile('com.h2database:h2')
+	compile group:  'pl.allegro.tech.boot', name: 'handlebars-spring-boot-starter', version:  '0.3.0'
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.5.0'
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.5.0'
 	implementation 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.3'
