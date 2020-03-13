@@ -40,11 +40,11 @@ spring.profiles.include: real-db
 server:
   port: 8082
 
-# ---
-# spring:
-#   profiles: real-db
-#   datasource:
-#         url: 
-#         username: 
-#         password: 
-#         driver-class-name: 
+---
+spring:
+  profiles: real-db
+  datasource:
+        url:
+        username:
+        password:
+        driver-class-name:
