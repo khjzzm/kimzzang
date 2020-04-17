@@ -14,6 +14,7 @@ public class PostsMainResponseDto {
     
     private Long id;
     private String title;
+    private String content;
     private String author;
     private String modifiedDate;
     private String img;
@@ -21,8 +22,9 @@ public class PostsMainResponseDto {
     public PostsMainResponseDto(Posts entity) {
         id = entity.getId();
         title = entity.getTitle();
+        content = entity.getContent();
         author = entity.getAuthor();
-        img = "https://placeimg.com/64/64/any";
+        img = "https://placeimg.com/690/920/any";
         modifiedDate = toStringDateTime(entity.getModifiedDate());
     }
 

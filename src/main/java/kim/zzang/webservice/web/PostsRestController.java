@@ -25,6 +25,7 @@ public class PostsRestController {
 
     @GetMapping("/api/list")
     public List<PostsMainResponseDto> list() {
+        System.out.println("api/list");
         return postsService.findAllDesc();
     }
 
