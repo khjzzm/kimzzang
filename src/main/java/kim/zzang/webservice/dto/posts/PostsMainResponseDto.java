@@ -17,14 +17,14 @@ public class PostsMainResponseDto {
     private String content;
     private String author;
     private String modifiedDate;
-    private String img;
+    private String imagePath;
 
     public PostsMainResponseDto(Posts entity) {
         id = entity.getId();
         title = entity.getTitle();
         content = entity.getContent();
         author = entity.getAuthor();
-        img = "https://placeimg.com/690/920/any";
+        imagePath = entity.getImagePath();
         modifiedDate = toStringDateTime(entity.getModifiedDate());
     }
 

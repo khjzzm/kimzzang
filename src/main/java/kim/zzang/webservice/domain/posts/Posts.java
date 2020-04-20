@@ -25,11 +25,15 @@ public class Posts extends BaseTimeEntity {
 
     private String author;
 
+    @Column(columnDefinition = "TEXT", nullable = false)
+    private String imagePath;
+
     @Builder
-    public Posts(Long id, String title, String content, String author) {
+    public Posts(Long id, String title, String content, String author, String imagePath) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.author = author;
+        this.imagePath = imagePath;
     }
 }
