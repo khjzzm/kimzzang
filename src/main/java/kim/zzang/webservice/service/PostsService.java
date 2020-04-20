@@ -53,4 +53,9 @@ public class PostsService {
     public void deleteAllByIdInQuery(List<Long> ids) {
         postsRepository.deleteAllByIdInQuery(ids);
     }
+
+    @Transactional
+    public Long findAllPostCnt() {
+        return postsRepository.count();
+    }
 }

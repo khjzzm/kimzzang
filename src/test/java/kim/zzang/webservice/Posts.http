@@ -9,3 +9,7 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:8081/api/list/cnt
+Content-Type: application/json
+
+###

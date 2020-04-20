@@ -29,6 +29,11 @@ public class PostsRestController {
         return postsService.findAllDesc();
     }
 
+    @GetMapping("/api/list/cnt")
+    public Long listTotalPost(){
+        return postsService.findAllPostCnt();
+    }
+
     @PostMapping("/api/insert")
     public void insertPosts(@RequestBody PostsSaveRequestDto dto){
         postsService.insert(dto);
