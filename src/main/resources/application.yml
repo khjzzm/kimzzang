@@ -8,6 +8,8 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         format_sql: true
 
+
+
 # local 환경
 ---
 spring:
@@ -44,7 +46,20 @@ server:
 spring:
   profiles: real-db
   datasource:
-        url: jdbc:mariadb://database-1.cc1j8x3t3gto.ap-northeast-2.rds.amazonaws.com:3306/zzm
-        username: khj
-        password: ikeacafe!
-        driver-class-name: org.mariadb.jdbc.Driver
+        url:
+        username:
+        password:
+        driver-class-name:
+
+---
+cloud:
+  aws:
+    s3:
+      bucket:
+    region:
+      static:
+    credentials:
+      accessKey:
+      secretKey:
+    stack:
+          auto:
