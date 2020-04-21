@@ -6,11 +6,13 @@ import kim.zzang.webservice.dto.posts.PostsSaveRequestDto;
 import kim.zzang.webservice.dto.posts.PostsUpdateRequestDto;
 import kim.zzang.webservice.service.PostsService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @RestController
 @AllArgsConstructor
 @CrossOrigin(origins = {"*"})
@@ -20,6 +22,9 @@ public class PostsRestController {
 
     @GetMapping("/api/proxy")
     public String hello() {
+        log.info("log info");
+        log.warn("log warn");
+        log.error("log error");
         return "Proxy Test";
     }
 
