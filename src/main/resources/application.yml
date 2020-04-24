@@ -44,7 +44,7 @@ server:
 
 ---
 spring:
-  profiles: real-db
+  profiles:
   datasource:
         url:
         username:
@@ -63,3 +63,17 @@ cloud:
       secretKey:
     stack:
           auto:
+
+---
+spring:
+  mail:
+    host:
+    port:
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth:
+          starttls:
+            enable:

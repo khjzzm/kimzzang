@@ -1,4 +1,4 @@
-POST http://localhost:8080/posts
+POST http://localhost:8081/posts
 Content-Type: application/json
 
 {
@@ -11,5 +11,20 @@ Content-Type: application/json
 
 GET http://localhost:8081/api/list/cnt
 Content-Type: application/json
+
+###
+
+
+POST http://localhost:8081/api/send-mail
+Content-Type: application/json
+
+{
+  "address": "kklath@naver.com",
+  "title" : "테스트 본문",
+  "message": "테스터"
+}
+
+###
+GET http://localhost:8081/web/upload
 
 ###
