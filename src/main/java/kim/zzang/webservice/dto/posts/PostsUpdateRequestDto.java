@@ -1,6 +1,6 @@
 package kim.zzang.webservice.dto.posts;
 
-import kim.zzang.webservice.domain.posts.Posts;
+import kim.zzang.webservice.domain.posts.Post;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,8 +23,8 @@ public class PostsUpdateRequestDto {
         this.author = author;
     }
 
-    public Posts toEntity(){
-        return Posts.builder()
+    public Post toEntity(){
+        return Post.builder()
                 .id(id)
                 .title(title)
                 .content(content)

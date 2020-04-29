@@ -7,13 +7,13 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class MailSendRequestDto {
-    private String address;
+    private String name;
     private String kakaotalk;
     private String message;
 
     @Builder
-    public MailSendRequestDto(String address, String kakaotalk, String message) {
-        this.address = address;
+    public MailSendRequestDto(String name, String kakaotalk, String message) {
+        this.name = name;
         this.kakaotalk = kakaotalk;
         this.message = message;
     }

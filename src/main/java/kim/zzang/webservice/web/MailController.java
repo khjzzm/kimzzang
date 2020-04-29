@@ -21,7 +21,7 @@ public class MailController {
 
     @PostMapping("/api/send-mail")
     public void sendMail(@RequestBody MailSendRequestDto mailSendRequestDto) {
-        log.info("mailSendRequestDto", mailSendRequestDto);
+        log.info("{}", mailSendRequestDto);
         mailService.sendMail(mailSendRequestDto);
     }
 }

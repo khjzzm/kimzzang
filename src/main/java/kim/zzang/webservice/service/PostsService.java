@@ -1,6 +1,7 @@
 package kim.zzang.webservice.service;
 
-import kim.zzang.webservice.domain.posts.Posts;
+import kim.zzang.webservice.domain.posts.HashTag;
+import kim.zzang.webservice.domain.posts.Post;
 import kim.zzang.webservice.dto.posts.PostsMainResponseDto;
 import kim.zzang.webservice.dto.posts.PostsSaveRequestDto;
 import kim.zzang.webservice.dto.posts.PostsUpdateRequestDto;
@@ -19,12 +20,16 @@ public class PostsService {
     private PostsRepository postsRepository;
 
     @Transactional
-    public Long insert(PostsSaveRequestDto dto){
-        return postsRepository.save(dto.toEntity()).getId();
+    public Post insert(PostsSaveRequestDto dto) {
+        Post post = dto.toEntity();
+        for (HashTag h : dto.getHashtag()) {
+            h.setPost(post);
+        }
+        return postsRepository.save(post);
     }
 
     @Transactional
-    public void delete(Long id){
+    public void delete(Long id) {
         postsRepository.deleteById(id);
     }
 
@@ -36,12 +41,12 @@ public class PostsService {
     }
 
     @Transactional(readOnly = true)
-    public List<Posts> findByAuthor(String author) {
+    public List<Post> findByAuthor(String author) {
         return postsRepository.findByAuthor(author);
     }
 
     @Transactional(readOnly = true)
-    public Optional<Posts> findById(Long id) {
+    public Optional<Post> findById(Long id) {
         return postsRepository.findById(id);
     }
 

@@ -1,20 +1,21 @@
 package kim.zzang.webservice.domain.posts;
 
 import kim.zzang.webservice.domain.BaseTimeEntity;
-import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "post")
 @Getter
 @Entity
-public class Posts extends BaseTimeEntity {
+public class Post extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="POST_ID")
     private Long id;
 
     @Column(length = 500, nullable = false)
@@ -25,11 +26,22 @@ public class Posts extends BaseTimeEntity {
 
     private String author;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "TEXT", nullable = true)
     private String imagePath;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, mappedBy = "post")
+    private List<HashTag> hashTags = new ArrayList<HashTag>();
+
+    void addHashTag(HashTag hashTag){
+        this.hashTags.add(hashTag);
+    }
+
+    void removeHashTag(HashTag hashTag){
+        this.hashTags.remove(hashTag);
+    }
+
     @Builder
-    public Posts(Long id, String title, String content, String author, String imagePath) {
+    public Post(Long id, String title, String content, String author, String imagePath) {
         this.id = id;
         this.title = title;
         this.content = content;

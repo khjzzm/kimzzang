@@ -1,10 +1,13 @@
 package kim.zzang.webservice.dto.posts;
 
-import kim.zzang.webservice.domain.posts.Posts;
-import lombok.Builder;
+import kim.zzang.webservice.domain.posts.HashTag;
+import kim.zzang.webservice.domain.posts.Post;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -13,16 +16,10 @@ public class PostsSaveRequestDto {
     private String title;
     private String content;
     private String author;
+    private List<HashTag> hashtag = new ArrayList<>();
 
-    @Builder
-    public PostsSaveRequestDto(String title, String content, String author) {
-        this.title = title;
-        this.content = content;
-        this.author = author;
-    }
-
-    public Posts toEntity() {
-        return Posts.builder()
+    public Post toEntity() {
+        return Post.builder()
                 .title(title)
                 .content(content)
                 .author(author)

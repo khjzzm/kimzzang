@@ -16,7 +16,7 @@ public class MailService {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(MailService.ADDRESS);
         message.setTo(MailService.ADDRESS);
-        message.setSubject(mailSendRequestDto.getKakaotalk());
+        message.setSubject(mailSendRequestDto.getName()+"("+mailSendRequestDto.getKakaotalk()+")");
         message.setText(mailSendRequestDto.getMessage());
 
         mailSender.send(message);

@@ -6,22 +6,22 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import kim.zzang.webservice.domain.posts.Posts;
+import kim.zzang.webservice.domain.posts.Post;
 
 import java.util.List;
 import java.util.stream.Stream;
 
-public interface PostsRepository extends JpaRepository<Posts, Long>{
+public interface PostsRepository extends JpaRepository<Post, Long>{
 
-    @Query(value = "SELECT p FROM Posts p ORDER BY p.id DESC")
-    Stream<Posts> findAllDesc();
+    @Query(value = "SELECT p FROM Post p ORDER BY p.id DESC")
+    Stream<Post> findAllDesc();
 
-    List<Posts> findByAuthor(String author);
+    List<Post> findByAuthor(String author);
 
     void deleteById(Long id);
 
     @Transactional
     @Modifying
-    @Query("delete from Posts p where p.id in :ids")
+    @Query("delete from Post p where p.id in :ids")
     void deleteAllByIdInQuery(@Param("ids") List<Long> ids);
 }

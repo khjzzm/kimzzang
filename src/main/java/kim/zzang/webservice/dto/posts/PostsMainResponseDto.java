@@ -1,6 +1,6 @@
 package kim.zzang.webservice.dto.posts;
 
-import kim.zzang.webservice.domain.posts.Posts;
+import kim.zzang.webservice.domain.posts.Post;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -19,7 +19,7 @@ public class PostsMainResponseDto {
     private String modifiedDate;
     private String imagePath;
 
-    public PostsMainResponseDto(Posts entity) {
+    public PostsMainResponseDto(Post entity) {
         id = entity.getId();
         title = entity.getTitle();
         content = entity.getContent();

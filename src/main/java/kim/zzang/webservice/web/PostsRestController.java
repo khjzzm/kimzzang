@@ -1,6 +1,6 @@
 package kim.zzang.webservice.web;
 
-import kim.zzang.webservice.domain.posts.Posts;
+import kim.zzang.webservice.domain.posts.Post;
 import kim.zzang.webservice.dto.posts.PostsMainResponseDto;
 import kim.zzang.webservice.dto.posts.PostsSaveRequestDto;
 import kim.zzang.webservice.dto.posts.PostsUpdateRequestDto;
@@ -30,7 +30,6 @@ public class PostsRestController {
 
     @GetMapping("/api/list")
     public List<PostsMainResponseDto> list() {
-        System.out.println("api/list");
         return postsService.findAllDesc();
     }
 
@@ -50,12 +49,12 @@ public class PostsRestController {
     }
 
     @GetMapping("/api/findByAuthor")
-    public List<Posts> findByAuthor(@RequestParam String author){
+    public List<Post> findByAuthor(@RequestParam String author){
         return postsService.findByAuthor(author);
     }
 
     @GetMapping("/api/findById")
-    public Optional<Posts> findById(@RequestParam Long id){
+    public Optional<Post> findById(@RequestParam Long id){
         return postsService.findById(id);
     }
 
