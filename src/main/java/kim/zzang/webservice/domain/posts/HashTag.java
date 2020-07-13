@@ -18,8 +18,8 @@ public class HashTag {
     @Column(columnDefinition = "TEXT")
     private String hashtag;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = true)
-    @JoinColumn(name = "POST_ID")
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @JoinColumn(name = "POST_ID", foreignKey = @ForeignKey(name = "hashtag_post_post_id_fk"))
     private Post post;
 
     public void setPost(Post post) {

@@ -1,8 +1,10 @@
 package kim.zzang.webservice.domain.posts;
 
 import kim.zzang.webservice.domain.BaseTimeEntity;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ import java.util.List;
 @Table(name = "post")
 @Getter
 @Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Post extends BaseTimeEntity {
 
     @Id
@@ -29,7 +32,7 @@ public class Post extends BaseTimeEntity {
     @Column(columnDefinition = "TEXT", nullable = true)
     private String imagePath;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, mappedBy = "post")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "post")
     private List<HashTag> hashTags = new ArrayList<HashTag>();
 
     void addHashTag(HashTag hashTag){
